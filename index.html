@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steve OCPP Emulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Steve OCPP Emulator</h1>
+    <form id="command-form">
+      <label for="key">Auth Key:</label>
+      <input type="text" id="key" name="key" required>
+      <label for="cmd">Command:</label>
+      <select id="cmd" name="cmd" required>
+        <option value="getConnectorState">Get Connector State</option>
+        <option value="ReserveNow">Reserve Now</option>
+        <option value="RemoteStartTransaction">Remote Start Transaction</option>
+        <option value="RemoteStopTransaction">Remote Stop Transaction</option>
+        <option value="UnlockConnector">Unlock Connector</option>
+        <option value="DataTransfer">Data Transfer</option>
+        <option value="Reset">Reset</option>
+        <option value="SetChargingProfile">Set Charging Profile</option>
+      </select>
+      <label for="ChargeBoxID">Charge Box ID:</label>
+      <input type="text" id="ChargeBoxID" name="ChargeBoxID" required>
+      <label for="ConnectorID">Connector ID:</label>
+      <input type="text" id="ConnectorID" name="ConnectorID" required>
+      <label for="idTag">ID Tag:</label>
+      <input type="text" id="idTag" name="idTag">
+      <label for="Expiry">Expiry:</label>
+      <input type="text" id="Expiry" name="Expiry">
+      <label for="VendorID">Vendor ID:</label>
+      <input type="text" id="VendorID" name="VendorID">
+      <label for="MessageID">Message ID:</label>
+      <input type="text" id="MessageID" name="MessageID">
+      <label for="Data">Data:</label>
+      <input type="text" id="Data" name="Data">
+      <button type="submit">Submit</button>
+    </form>
+    <div id="response"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
